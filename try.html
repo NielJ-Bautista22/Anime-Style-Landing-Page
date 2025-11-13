@@ -5,65 +5,142 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hero with Curved Bottom Vignette</title>
 <style>
-  body, html {
-    margin: 0;
-    padding: 0;
-  }
+  .characters-section {
+  padding: 80px 10%;
+  background: #0b0b0b;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
 
-  .hero {
-    position: relative;
-    height: 100vh;
-    background: url('your-image.jpg') center/cover no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-    font-family: sans-serif;
-    overflow: hidden;
-  }
+.characters-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
 
-  .hero h1 {
-    font-size: 4rem;
-    margin: 0;
-    position: relative;
-    z-index: 1;
-  }
+.characters-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
 
-  .hero p {
-    font-size: 1.5rem;
-    position: relative;
-    z-index: 1;
-  }
+.characters-header p {
+  color: #aaa;
+  font-size: 1rem;
+}
 
-  /* SVG curved vignette overlay */
-  .vignette {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 150px; /* height of the wave */
-    pointer-events: none;
-    z-index: 3;
-  }
+.character-group {
+  margin-bottom: 70px;
+}
+
+.group-title {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  border-left: 4px solid crimson;
+  padding-left: 2px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.character-card {
+  background: #151515;
+  border-radius: 20px;
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.character-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(255, 0, 0, 0.3);
+}
+
+.character-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 15px;
+}
+
+.character-card h4 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.character-card p {
+  color: #bbb;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
 </style>
 </head>
 <body>
 
-<section class="hero">
-  <h1>Welcome to My Site</h1>
-  <p>Discover amazing things below</p>
+<section class="characters-section">
+  <header class="characters-header">
+    <h2>Characters</h2>
+    <p>Meet the cast of the story</p>
+  </header>
 
-  <svg class="vignette" viewBox="0 0 1440 100" preserveAspectRatio="none">
-    <defs>
-      <linearGradient id="grad" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stop-color="black" stop-opacity="0.3" />
-        <stop offset="100%" stop-color="black" stop-opacity="0.9" />
-      </linearGradient>
-    </defs>
-    <path d="M0,0 C480,100 960,100 1440,0 L1440,250 L0,250 Z" fill="url(#grad)"/>
-  </svg>
+  <!-- Protagonists -->
+  <div class="character-group">
+    <h3 class="group-title">Protagonists</h3>
+    <div class="card-grid">
+      <div class="character-card">
+        <img src="static/lulu.png" alt="Lelouch Lamperouge">
+        <h4>Lelouch Lamperouge</h4>
+        <p>The brilliant strategist who seeks justice through rebellion.</p>
+      </div>
+
+      <div class="character-card">
+        <img src="static/cc.png" alt="C.C.">
+        <h4>C.C.</h4>
+        <p>The mysterious immortal who grants Lelouch his Geass power.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Antagonists -->
+  <div class="character-group">
+    <h3 class="group-title">Antagonists</h3>
+    <div class="card-grid">
+      <div class="character-card">
+        <img src="static/schneizel.png" alt="Schneizel">
+        <h4>Schneizel el Britannia</h4>
+        <p>A cunning prince and Lelouch’s greatest political rival.</p>
+      </div>
+
+      <div class="character-card">
+        <img src="static/cornelia.png" alt="Cornelia">
+        <h4>Cornelia li Britannia</h4>
+        <p>The proud warrior princess loyal to the Britannian Empire.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Side Characters -->
+  <div class="character-group">
+    <h3 class="group-title">Side Characters</h3>
+    <div class="card-grid">
+      <div class="character-card">
+        <img src="static/suzaku.png" alt="Suzaku Kururugi">
+        <h4>Suzaku Kururugi</h4>
+        <p>Lelouch’s friend turned soldier, driven by ideals of peace.</p>
+      </div>
+
+      <div class="character-card">
+        <img src="static/kallen.png" alt="Kallen Stadtfeld">
+        <h4>Kallen Stadtfeld</h4>
+        <p>A fierce resistance fighter with unwavering loyalty to Zero.</p>
+      </div>
+    </div>
+  </div>
 </section>
+
 
 </body>
 </html>
