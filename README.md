@@ -1,4 +1,4 @@
-Anime Style Landing Page – Code Geass
+Anime Landing Page – Code Geass
 
 Welcome to Anime Landing Page – Code Geass, a web project inspired by the iconic anime Code Geass. This project is a personal practice in HTML, CSS, and JavaScript, focusing on creating dynamic and interactive web elements.
 
