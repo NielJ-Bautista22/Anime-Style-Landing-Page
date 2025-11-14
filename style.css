@@ -11,6 +11,10 @@ body {
     overflow-x: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 
 
 
@@ -48,8 +52,6 @@ body {
   80% { transform: translateY(0px); }
   100% { opacity: 1; transform: translateY(0); }
 }
-
-
 
 
 .navbar ul {
@@ -285,45 +287,6 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.char-card:nth-child(1){
-  transition-delay: 100ms;
-}
-
-.char-card:nth-child(2){
-  transition-delay: 300ms;
-}
-
-.char-card:nth-child(3){
-  transition-delay: 500ms;
-}
-
-.char-card:nth-child(4){
-  transition-delay: 700ms;
-}
-
-.char-card:nth-child(5){
-  transition-delay: 900ms;
-}
-
-.char-card:nth-child(6){
-  transition-delay: 100ms;
-}
-
-.char-card:nth-child(7){
-  transition-delay: 300ms;
-}
-
-.char-card:nth-child(8){
-  transition-delay: 500ms;
-}
-
-.char-card:nth-child(9){
-  transition-delay: 700ms;
-}
-
-.char-card:nth-child(10){
-  transition-delay: 900ms;
-}
 
 .char-card img {
   width: 100%;
@@ -338,6 +301,7 @@ body {
 }
 
 .char-card p {
+  font-family: "Montserrat";
   font-size: 0.9rem;
   padding: 0 10px 15px;
   color: #ccc;
@@ -366,23 +330,13 @@ body {
   transform: scale(1.05);
 }
 
-/* Scroll Animation for Carousel Images */
-
-
-
-
-/* Scroll Animation */
-
 .hidden {
   opacity: 0;
   filter: blur(5px);
-  transition: all 1s;
-  transform: translateX(-100%);
+  transition: all 1.5s;
 }
 
 .show {
-  opacity: 1;
-  filter: blur(0);
-  transform: translateX(0);
-}
-
+    opacity: 1;
+    filter: blur(0);
+  }

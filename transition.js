@@ -19,8 +19,8 @@ function scrollAnimation(selector, showClass) {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 entry.target.classList.add(showClass);
-            } else {
-                entry.target.classList.remove(showClass);
+                observer.unobserve(entry.target); 
+
             }
         });
     });
@@ -29,4 +29,3 @@ function scrollAnimation(selector, showClass) {
 }
 
 scrollAnimation(".hidden", "show");
-scrollAnimation(".hidden-car", "show-car");

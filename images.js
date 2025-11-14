@@ -1,10 +1,3 @@
-const background = {
-  1: ["static/bg (1).png", ],  
-  2: ["static/bg (2).png", ],  
-  3: ["static/bg (3).png", ] 
-};
-
-
 const scenes1 = [
   "static/scenes/scenes (1).jpg",
   "static/scenes/scenes (1).png",
@@ -72,18 +65,18 @@ const heroOptions = {
 };
 
 const keys = Object.keys(heroOptions);         
-const randomKey = keys[Math.floor(Math.random() * keys.length)]; // "1" or "2"
-const chosen = heroOptions[randomKey];           // the paired values for that key
+const randomKey = keys[Math.floor(Math.random() * keys.length)]; 
+const chosen = heroOptions[randomKey];          
 
 console.log(chosen);
 
-/* elements from your supplied HTML */
+
 const heroSection = document.getElementById("hero-bg");
 const heroSubject = document.getElementById("hero-subject");
 
-/* apply background and subject image */
+
 heroSection.src = chosen.background;
 heroSubject.src = chosen.subject;
 
-heroSubject.classList.remove(...keys.map(k => heroOptions[k].class)); // remove any existing image classes
+heroSubject.classList.remove(...keys.map(k => heroOptions[k].class));
 heroSubject.classList.add(chosen.class);
